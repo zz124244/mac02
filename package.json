@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "npm run build:reference && vue-tsc --noEmit && vite build",
+    "build": "npm run build:reference && vue-tsc --noEmit --project ./tsconfig.json && vite build",
     "build:android-release": "node scripts/check-android-release-env.mjs && npm run build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --test tests/*.test.mjs",
