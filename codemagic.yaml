@@ -10,8 +10,9 @@ workflows:
 
     scripts:
       - name: Install npm dependencies
-        script: |
-          npm ci
+      script: |
+      npm config set registry https://registry.npmjs.org/
+      npm ci --registry=https://registry.npmjs.org/
 
       - name: Build web application
         script: |
